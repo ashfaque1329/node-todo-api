@@ -74,7 +74,7 @@ app.patch("/todos/:id", (req, res) => {
     body.completedAt = null;
   }
 
-  Todo.findByIdAndUpdate(id, { $set: body }, { new: True })
+  Todo.findByIdAndUpdate(id, { $set: body }, { new: true })
     .then(todo => {
       res.send({ todo });
     })
